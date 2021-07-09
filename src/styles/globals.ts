@@ -76,9 +76,10 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   html, body, #__next {
-    height: 100vh;
+    min-height: 100vh;
+    padding-bottom: 1.5rem;
 
-    background-image: linear-gradient(to bottom, var(--first-background-color), var(--second-background-color));
+    background: linear-gradient(to bottom, var(--first-background-color), var(--second-background-color));
     cursor: initial;
     scroll-behavior: smooth;
   }

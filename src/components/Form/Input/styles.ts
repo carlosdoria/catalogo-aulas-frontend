@@ -6,7 +6,7 @@ interface Input {
 
 export const Input = styled.input<Input>`
   height: 38px;
-  min-width: 160px;
+  min-width: 250px;
   /* margin-top: 1.4rem; */
   padding: .7rem .5rem;
 

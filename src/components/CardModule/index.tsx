@@ -1,4 +1,3 @@
-import { Form } from '@unform/web'
 import { Input } from 'components/Form/Input'
 import { BiEdit, BiTrash } from 'react-icons/bi'
 
@@ -21,23 +20,25 @@ export function CardModule ({ id, title, isActive, isEditing, isAdmin, handleCom
   return (
     <>
       {isAdmin ? (
-        <S.Container>
+        <S.Container isActive={isActive} isAdmin={isAdmin}>
           {!isEditing ?
-            <span>{title}</span>
+            <div>
+              <h2>{title}</h2>
+              <div>
+                <BiEdit size={30} onClick={() => handleComponentEditing(id)}/>
+                <BiTrash size={30} onClick={() => deleteModule(id)}/>
+              </div>
+            </div>
             :
-            <Form onSubmit={newTitle => editModule(id, newTitle.titleModule, title)}>
+            <S.FormStyle onSubmit={newTitle => editModule(id, newTitle.titleModule, title)}>
               <Input name='titleModule' defaultValue={title}/>
               <button type='submit'>Atualizar</button>
-            </Form>
+            </S.FormStyle>
           }
-          <div>
-            <BiEdit onClick={() => handleComponentEditing(id)}/>
-            <BiTrash onClick={() => deleteModule(id)}/>
-          </div>
         </S.Container>
       ) : (
         <S.Container onClick={() => handleModule(id)} isActive={isActive}>
-          <span onBlur={() => console.log('asdasd')}>{title}</span>
+          <span>{title}</span>
         </S.Container>
       )}
     </>

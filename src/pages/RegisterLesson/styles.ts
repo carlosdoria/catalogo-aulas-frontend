@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { Form as UForm } from '@unform/web'
 import Select from 'react-select'
+import { Input } from 'components'
 
 export const Container = styled.main`
   margin-top: 3rem;
@@ -37,11 +38,8 @@ export const FormLesson = styled(UForm)`
 `
 
 export const ButtonContainer = styled.div`
-  /* margin-top: 3rem; */
-
   display: flex;
-  /* flex-direction: column; */
-  /* align-items: center; */
+
   justify-content: space-around;
 `
 
@@ -58,12 +56,13 @@ export const AddButton = styled.button`
   border-radius: .5rem;
 `
 
-export const ListModules = styled.div`
+export const List = styled.div`
   margin-top: 2rem;
 `
 
 export const ReactSelect = styled(Select)`
-  min-width: 240px;
+  width: 20rem;
+   margin-bottom: 1rem;
 `
 
 export const InputContent = styled.div`
@@ -71,4 +70,12 @@ export const InputContent = styled.div`
 
   display: flex;
   flex-direction: column;
+`
+
+export const InputStyle = styled(Input)`
+  width: 20rem;
+
+   + input {
+     margin-left: 1rem;
+   }
 `

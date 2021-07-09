@@ -146,7 +146,7 @@ export default function App () {
             <S.AddButton type='submit'>Adicionar</S.AddButton>
           </S.FormModule>
         </div>
-        <S.ListModules>
+        <S.List>
           {modules.map(module => (
             <CardModule
               key={module._id}
@@ -160,7 +160,7 @@ export default function App () {
               deleteModule={deleteModule}
             />
           ))}
-        </S.ListModules>
+        </S.List>
       </S.ModuleContainer>
 
       <S.ClassContainer>
@@ -184,15 +184,15 @@ export default function App () {
             />
             {moduleSelected &&
             <S.FormLesson ref={formRefLesson} onSubmit={handleSubmitLesson}>
-              <Input name='title' placeholder='Aula' />
-              <Input name='link' placeholder='Link da aula' />
-              <Input name='classDate' placeholder='Data da aula' type='date' />
+              <S.InputStyle name='title' placeholder='Aula' />
+              <S.InputStyle name='link' placeholder='Link da aula' />
+              <S.InputStyle name='classDate' placeholder='Data da aula' type='date' />
               <S.AddButton type='submit'>Adicionar</S.AddButton>
             </S.FormLesson>
             }
           </S.InputContent>
         </div>
-        <div>
+        <S.List>
           {lessons.map(lesson => (
             <CardLesson
               key={lesson._id}
@@ -208,7 +208,7 @@ export default function App () {
               editLessons={editLessons}
             />
           ))}
-        </div>
+        </S.List>
       </S.ClassContainer>
     </S.Container>
   )

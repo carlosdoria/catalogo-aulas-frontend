@@ -41,31 +41,38 @@ export function CardLesson ({
 
   return (<>
     {isAdmin ?
-      <S.Container>
+      <S.Container isEditing={isEditing}>
         {!isEditing ?
-          <>
-            <span>{title}</span>
+          <div>
+            <h2>{title}</h2>
             <a href={link} target='_blank' rel="noreferrer">Link da Aula</a>
-            <h3>{dateFormated}</h3>
-          </>
+            <h4>{dateFormated}</h4>
+          </div>
           :
-          <Form onSubmit={newLesson => editLessons(lessonId, moduleId, newLesson.titleLesson, newLesson.link, newLesson.classDate)}>
+          <S.FormStyle onSubmit={newLesson => editLessons(lessonId, moduleId, newLesson.titleLesson, newLesson.link, newLesson.classDate)}>
+            <small>Título da aula</small>
             <Input name='titleLesson' defaultValue={title}/>
+            <small>Link</small>
             <Input name='link' defaultValue={link}/>
+            <small>Data da aula</small>
             <Input name='classDate' type='date' defaultValue={defaultValueDate} />
             <button type='submit'>Atualizar</button>
-          </Form>
+          </S.FormStyle>
         }
-        <>
-          <BiEdit onClick={() => handleComponentEditing(lessonId)}/>
-          <BiTrash onClick={() => deleteLessons(lessonId, moduleId)}/>
-        </>
+        {!isEditing &&
+        <div>
+          <BiEdit size={30} onClick={() => handleComponentEditing(lessonId)}/>
+          <BiTrash size={30} onClick={() => deleteLessons(lessonId, moduleId)}/>
+        </div>
+        }
       </S.Container>
       :
       <S.Container>
-        <h1>{title}</h1>
-        <a href={link} target='_blank' rel="noreferrer">Link da Aula</a>
-        <h3>{new Intl.DateTimeFormat('pt-BR').format(new Date(classDate))}</h3>
+        <div>
+          <h2>{title}</h2>
+          <a href={link} target='_blank' rel="noreferrer">Link da Aula</a>
+          <h4>Data da aula: {new Intl.DateTimeFormat('pt-BR').format(new Date(classDate))}</h4>
+        </div>
       </S.Container>
     }
   </>)
