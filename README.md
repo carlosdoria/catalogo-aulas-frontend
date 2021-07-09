@@ -1,34 +1,85 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align='center'><strong>Catálogo de aulas - Frontend</strong></h1>
 
-## Getting Started
+## Index
 
-First, run the development server:
+- [About the project](#about-the-project)
+<!-- - [Deploy](#deploy) -->
+- [Technologies and tools used](#technologies-and-tools-used)
+- [Starting the project](#starting-the-project)
 
-```bash
-npm run dev
-# or
+<br>
+<!--
+![GitHub](https://img.shields.io/github/license/carlosdoria/social-links)
+![GitHub](https://img.shields.io/github/languages/count/carlosdoria/social-links)
+<br> -->
+
+<!-- ![Print da Home Page](https://github.com/carlosdoria/clone-pipefy/blob/main/public/images/Home-page.png) -->
+
+## 📝 About the project
+
+Simple application for class management.
+
+<br>
+
+<!-- ## Deploy
+
+Deploy link:
+[Deploy](https://carlosdoria-portifolio.vercel.app/)
+
+<br> -->
+
+## 🚀 Technologies and tools used
+
+The project was developed with the following technologies and tools:
+
+- [NextJS](https://nextjs.org/);
+- [TypeScript](https://www.typescriptlang.org/);
+- [Styled Components](https://styled-components.com/);
+- [Axios](https://axios-http.com/docs/intro);
+- [Nookies](https://github.com/maticzav/nookies);
+- [Unform](https://unform.dev/);
+- [Plop](https://plopjs.com/);
+
+<br>
+
+## Starting the project
+
+In your terminal, clone this repository:
+
+```
+git clone https://github.com/carlosdoria/catalogo-aulas-frontend
+```
+
+Then enter the directory:
+
+```
+cd catalogo-aulas-frontend
+```
+
+And run the following command to install the necessary dependencies:
+
+```
+yarn
+```
+
+To run the development server:
+
+```
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Finally, if the browser does not automatically open a tab with the application, access the following link:
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```
+http://localhost:3000
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.tsx`.
+<!-- ## Como contribuir
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+ -->
 
-## Learn More
+<br>
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Developed by [Carlos Dória](https://github.com/carlosdoria)

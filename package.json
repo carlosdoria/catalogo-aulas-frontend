@@ -10,12 +10,9 @@
     "generate": "yarn plop --plopfile ./generators/plopfile.js"
   },
   "dependencies": {
-    "@material-ui/core": "^4.12.1",
-    "@material-ui/icons": "^4.11.2",
     "@unform/core": "^2.1.6",
     "@unform/web": "^2.1.6",
     "axios": "^0.21.1",
-    "mui-datatables": "^3.7.7",
     "next": "11.0.1",
     "nookies": "^2.5.2",
     "react": "17.0.2",
@@ -26,7 +23,6 @@
   },
   "devDependencies": {
     "@types/cookie": "^0.4.1",
-    "@types/mui-datatables": "^3.7.4",
     "@types/react": "17.0.13",
     "@types/react-select": "^4.0.17",
     "@types/styled-components": "^5.1.11",
