@@ -10,13 +10,16 @@ export const GlobalStyles = createGlobalStyle`
   } */
 
   /* VARIEBLE COLORS */
-  /* :root {
-    --first-background-color: #050410;
-    --first-color: #3f70f3;
+  :root {
+    --first-background-color: #385369;
+    --second-background-color: #4f7ba0;
+    --black: #000;
+    --white: #fff;
+    --red: #b3344a;
     --second-color: #fff;
     --footer-first-color: #fff;
-    --footer-second-color: #3f70f3;
-  } */
+    --blue: #3f70f3;
+  }
 
   /* VARIEBLE FONTS AND TYPES */
   /* :root {
@@ -75,7 +78,7 @@ export const GlobalStyles = createGlobalStyle`
   html, body, #__next {
     height: 100vh;
 
-    /* background-color: var(--first-background-color); */
+    background-image: linear-gradient(to bottom, var(--first-background-color), var(--second-background-color));
     cursor: initial;
     scroll-behavior: smooth;
   }

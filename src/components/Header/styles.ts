@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.header`
-  height: 5.5rem;
+  height: 10vh;
   padding: 0 10%;
 
   display: flex;
@@ -15,27 +15,34 @@ export const Navbar = styled.nav`
 `
 
 export const NavList = styled.ul`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
 
   list-style: none;
 
-  a {
-    color: var(--white);
-    /* color: #535353; */
-    font-weight: bold;
-    letter-spacing: .8px;
+  li {
+    + li{
+      padding-left: 2rem
+    }
 
-    cursor: pointer;
-    filter: brightness(.8);
-    transition: color .4s;
+    a {
+      color: var(--white);
+      /* color: #535353; */
+      font-weight: bold;
+      letter-spacing: .8px;
 
-    :hover {
-      /* color: #fff; */
-      filter: brightness(1);
+      cursor: pointer;
+      filter: brightness(.8);
+      transition: color .4s;
+
+      :hover {
+        /* color: #fff; */
+        filter: brightness(1);
+      }
     }
   }
+
 `
 
-export const NavContent = styled.li``
-
+export const Username = styled.a`
+text-transform: capitalize
+`

@@ -1,7 +1,8 @@
 // import App from "next/app";
 import { AppProps /* , AppContext */ } from 'next/app'
 import Head from 'next/head'
-import { Header } from 'components/Header'
+import { Header } from 'components'
+import { UserProvider } from 'hooks/useUser'
 
 import { GlobalStyles } from '../styles/globals'
 
@@ -13,8 +14,10 @@ function MyApp ({ Component, pageProps }: AppProps) {
         <meta name="description" content="My boilerplete" />
       </Head>
       <GlobalStyles />
-      <Header />
-      <Component {...pageProps} />
+      <UserProvider>
+        <Header />
+        <Component {...pageProps} />
+      </UserProvider>
     </>
   )
 }
