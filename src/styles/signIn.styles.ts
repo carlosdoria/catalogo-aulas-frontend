@@ -34,24 +34,24 @@ export const ButtonContainer = styled.div`
   /* flex-direction: column; */
   /* align-items: center; */
   justify-content: space-around;
-`
 
-export const CreateAccountButton = styled.button`
-  padding: .4rem 1.4rem;
+  a {
+    padding: .4rem 1.4rem;
 
-  font-size: 16px;
+    font-size: 16px;
 
-  color:var(--white);
-  background-color:transparent;
+    color:var(--white);
+    background-color:transparent;
 
-  border: none;
-  border-radius: 6px;
+    border: none;
+    border-radius: 6px;
 
-  text-decoration: underline;
-  cursor:pointer;
+    text-decoration: underline;
+    cursor:pointer;
 
-  :hover {
-    text-decoration: none;
+    :hover {
+      text-decoration: none;
+    }
   }
 `
 

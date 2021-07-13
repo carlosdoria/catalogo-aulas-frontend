@@ -1,11 +1,11 @@
 import { useRef } from 'react'
 import { useRouter } from 'next/router'
 import { useUser } from 'hooks/useUser'
-import { api } from 'services/api'
 import { FormHandles } from '@unform/core'
 import { Input } from 'components/Form/Input'
 
-import * as S from './styles'
+import * as S from '../styles/signIn.styles'
+import Link from 'next/Link'
 
 interface NewUser {
   username: string
@@ -44,7 +44,7 @@ export default function SignIn () {
         <Input name='password' placeholder='Senha' type='password'/>
 
         <S.ButtonContainer>
-          <S.CreateAccountButton type='button' onClick={() => router.push('/SignUp')}>Crie sua conta</S.CreateAccountButton>
+          <Link href='/signUp'><a>Crie sua conta</a></Link>
           <S.SubmitButton type='submit'>Enviar</S.SubmitButton>
         </S.ButtonContainer>
       </S.Form>

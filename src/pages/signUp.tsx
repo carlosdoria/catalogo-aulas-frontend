@@ -1,11 +1,10 @@
 import { useRef, useState } from 'react'
 import { useRouter } from 'next/router'
 import { useUser } from 'hooks/useUser'
-import { api } from 'services/api'
 import { FormHandles } from '@unform/core'
 import { Input } from 'components/Form/Input'
 
-import * as S from './styles'
+import * as S from '../styles/signUp.styles'
 
 interface NewUser {
   name: string

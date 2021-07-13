@@ -2,7 +2,7 @@ import { useUser } from 'hooks/useUser'
 import Image from 'next/image'
 import Link from 'next/Link'
 
-import logoImg from '../../../public/logo1.png'
+import logoImg from '../../assets/logo.png'
 
 import * as S from './styles'
 
@@ -33,7 +33,7 @@ export function Header () {
 
           {context.user.isAdmin &&
             <li>
-              <Link href='/RegisterLesson'>
+              <Link href='/registerLesson'>
                 <a>Cadastro de Aulas</a>
               </Link>
             </li>
@@ -48,7 +48,7 @@ export function Header () {
               </Link>
 
               :
-              <Link href='/SignIn'>
+              <Link href='/signIn'>
                 <a>Login</a>
               </Link>
             }

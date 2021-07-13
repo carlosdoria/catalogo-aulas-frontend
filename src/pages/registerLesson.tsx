@@ -8,7 +8,7 @@ import { CardModule, CardLesson, Input } from 'components'
 import { getAPIClient } from 'services/axios'
 import { useUser } from 'hooks/useUser'
 import { api } from 'services/api'
-import * as S from './styles'
+import * as S from '../styles/registerLesson.styles'
 
 interface IModule {
   _id: string
